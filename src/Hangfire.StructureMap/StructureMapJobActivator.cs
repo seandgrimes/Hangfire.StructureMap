@@ -21,7 +21,7 @@
         /// the job activation process</param>
         public StructureMapJobActivator(IContainer container)
         {
-            if (container == null) throw new ArgumentNullException("container");
+            if (container == null) throw new ArgumentNullException(nameof(container));
 
             _container = container;
         }
@@ -54,10 +54,6 @@
 
             public override void DisposeScope()
             {
-                var containerLifecycleInstanceRef = _container.Model.AllInstances.FirstOrDefault(@ref => @ref.Lifecycle is ContainerLifecycle);
-
-                if (containerLifecycleInstanceRef != null) containerLifecycleInstanceRef.Lifecycle.EjectAll(_container.Model.Pipeline);
-
                 _container.Dispose();
             }
         }
