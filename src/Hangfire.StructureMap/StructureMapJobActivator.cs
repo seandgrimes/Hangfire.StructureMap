@@ -21,7 +21,7 @@
         /// the job activation process</param>
         public StructureMapJobActivator(IContainer container)
         {
-            if (container == null) throw new ArgumentNullException("container");
+            if (container == null) throw new ArgumentNullException(nameof(container));
 
             _container = container;
         }
@@ -33,6 +33,7 @@
         }
 
         /// <inheritdoc />
+        [Obsolete("Please implement/use the BeginScope(JobActivatorContext) method instead. Will be removed in 2.0.0.")]
         public override JobActivatorScope BeginScope()
         {
             return new StructureMapDependencyScope(_container.GetNestedContainer());
@@ -56,7 +57,7 @@
             {
                 var containerLifecycleInstanceRef = _container.Model.AllInstances.FirstOrDefault(@ref => @ref.Lifecycle is ContainerLifecycle);
 
-                if (containerLifecycleInstanceRef != null) containerLifecycleInstanceRef.Lifecycle.EjectAll(_container.Model.Pipeline);
+                containerLifecycleInstanceRef?.Lifecycle.EjectAll(_container.Model.Pipeline);
 
                 _container.Dispose();
             }

@@ -48,7 +48,9 @@
             _container.Inject(disposable);
             var activator = CreateActivator();
 
+#pragma warning disable 618
             using (var scope = activator.BeginScope())
+#pragma warning restore 618
             {
                 var instance = scope.Resolve(typeof(BackgroundJobDependency));
                 Assert.Same(instance, disposable);
@@ -65,7 +67,9 @@
             _container.Configure(expression => expression.For<BackgroundJobDependency>().Singleton().Use(disposable));
             var activator = CreateActivator();
 
+#pragma warning disable 618
             using (var scope = activator.BeginScope())
+#pragma warning restore 618
             {
                 var instance = scope.Resolve(typeof(BackgroundJobDependency));
                 Assert.Same(instance, disposable);
@@ -81,7 +85,9 @@
             _container.Configure(expression => expression.For<object>().LifecycleIs<ContainerLifecycle>().Use(() => new object()));
             var activator = CreateActivator();
 
+#pragma warning disable 618
             using (var scope = activator.BeginScope())
+#pragma warning restore 618
             {
                 var instance1 = scope.Resolve(typeof(object));
                 var instance2 = scope.Resolve(typeof(object));
@@ -97,9 +103,13 @@
             var activator = CreateActivator();
 
             object instance1;
+#pragma warning disable 618
             using (var scope1 = activator.BeginScope()) instance1 = scope1.Resolve(typeof(object));
+#pragma warning restore 618
             object instance2;
+#pragma warning disable 618
             using (var scope2 = activator.BeginScope()) instance2 = scope2.Resolve(typeof(object));
+#pragma warning restore 618
 
             Assert.NotSame(instance1, instance2);
         }
@@ -111,7 +121,9 @@
             _container.Configure(expression => expression.For<BackgroundJobDependency>().LifecycleIs<ContainerLifecycle>());
             var activator = CreateActivator();
 
+#pragma warning disable 618
             using (var scope = activator.BeginScope())
+#pragma warning restore 618
             {
                 disposable = (BackgroundJobDependency)scope.Resolve(typeof(BackgroundJobDependency));
                 Assert.False(disposable.Disposed);
@@ -126,7 +138,9 @@
             _container.Configure(expression => expression.For<BackgroundJobDependency>().LifecycleIs<ContainerLifecycle>());
             var activator = CreateActivator();
 
+#pragma warning disable 618
             using (var scope = activator.BeginScope())
+#pragma warning restore 618
             {
                 var instance = (TestJob)scope.Resolve(typeof(TestJob));
                 Assert.Same(instance.BackgroundJobDependency, instance.SameDependencyObject.BackgroundJobDependency);
@@ -139,7 +153,9 @@
             _container.Configure(expression => expression.For<UniqueDependency>().AlwaysUnique());
             var activator = CreateActivator();
 
+#pragma warning disable 618
             using (var scope = activator.BeginScope())
+#pragma warning restore 618
             {
                 var instance = (TestJob)scope.Resolve(typeof(TestJob));
                 Assert.NotSame(instance.UniqueDependency, instance.SameDependencyObject.UniqueDependency);

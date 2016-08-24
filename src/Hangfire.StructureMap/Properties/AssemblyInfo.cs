@@ -13,5 +13,5 @@ using System.Runtime.InteropServices;
 // Represents version of entire product
 [assembly: AssemblyInformationalVersion("1.5.0")]
 
-[assembly: AssemblyVersion("1.5.0.0")]
-[assembly: AssemblyFileVersion("1.5.0.0")]
+[assembly: AssemblyVersion("1.6.3.0")]
+[assembly: AssemblyFileVersion("1.6.3.0")]
