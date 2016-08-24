@@ -5,12 +5,12 @@
     <version>$version$</version>
     <title>$title$</title>
     <authors>Lucas</authors>
-	<owners>http://github.com/lucashby/Hangfire.StructureMap</owners>
+    <owners>http://github.com/lucashby/Hangfire.StructureMap</owners>
     <projectUrl>http://github.com/lucashby/Hangfire.StructureMap</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Version bump to Hangfire version 1.6.3.0 and StructureMap version 4.3.0.449</releaseNotes>
-    <copyright>Copyright 2016</copyright>
+    <releaseNotes>$releaseNotes$</releaseNotes>
+    <copyright>Copyright 2015-2016</copyright>
     <tags>Hangfire StructureMap IoC</tags>
   </metadata>
 </package>
