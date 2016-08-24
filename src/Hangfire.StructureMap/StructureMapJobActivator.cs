@@ -33,6 +33,7 @@
         }
 
         /// <inheritdoc />
+        [Obsolete("Please implement/use the BeginScope(JobActivatorContext) method instead. Will be removed in 2.0.0.")]
         public override JobActivatorScope BeginScope()
         {
             return new StructureMapDependencyScope(_container.GetNestedContainer());
@@ -54,6 +55,10 @@
 
             public override void DisposeScope()
             {
+                var containerLifecycleInstanceRef = _container.Model.AllInstances.FirstOrDefault(@ref => @ref.Lifecycle is ContainerLifecycle);
+
+                containerLifecycleInstanceRef?.Lifecycle.EjectAll(_container.Model.Pipeline);
+
                 _container.Dispose();
             }
         }
