@@ -13,8 +13,11 @@
     <copyright>Copyright © 2014</copyright>
     <tags>Hangfire StructureMap IoC</tags>
     <dependencies>
-      <dependency id="StructureMap" version="3.1.4.143" />
-      <dependency id="Hangfire.Core" version="1.1.1" />
+	  <group targetFramework="net4" />
+	  <group targetFramework="dotnet">
+        <dependency id="structuremap" version="3.1.4.143" />
+        <dependency id="Hangfire.Core" version="1.1.1" />
+	  </group>
     </dependencies>
   </metadata>
   <files>
