@@ -1,12 +1,9 @@
 ﻿namespace Hangfire.StructureMap
 {
     using System;
-    using System.Linq;
-
     using global::StructureMap;
-    using global::StructureMap.Pipeline;
 
-    /// <summary>
+  /// <summary>
     /// StructureMap Job Activator.
     /// </summary>
     public class StructureMapJobActivator : JobActivator

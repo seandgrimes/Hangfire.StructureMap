@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.StructureMap", "Hangfire.StructureMap\Hangfire.StructureMap.csproj", "{8E00108B-C5C7-49DC-8C58-6CB6533AB701}"
 EndProject
@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{616509
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.StructureMap.Test", "Hangfire.StructureMap.Test\Hangfire.StructureMap.Test.csproj", "{A6D48A11-E7CD-44DC-BE39-049DA418B25B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreCompat.Hangfire.StructureMap", "CoreCompat.Hangfire.StructureMap\CoreCompat.Hangfire.StructureMap.csproj", "{29CD9909-0092-438E-8872-50C52C568B05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreCompat.Hangfire.StructureMap.Test", "CoreCompat.Hangfire.StructureMap.Test\CoreCompat.Hangfire.StructureMap.Test.csproj", "{F22C274C-3272-4C14-B954-61F5BDCA898D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,8 +32,19 @@ Global
 		{A6D48A11-E7CD-44DC-BE39-049DA418B25B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6D48A11-E7CD-44DC-BE39-049DA418B25B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6D48A11-E7CD-44DC-BE39-049DA418B25B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29CD9909-0092-438E-8872-50C52C568B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29CD9909-0092-438E-8872-50C52C568B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29CD9909-0092-438E-8872-50C52C568B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29CD9909-0092-438E-8872-50C52C568B05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F22C274C-3272-4C14-B954-61F5BDCA898D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F22C274C-3272-4C14-B954-61F5BDCA898D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F22C274C-3272-4C14-B954-61F5BDCA898D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F22C274C-3272-4C14-B954-61F5BDCA898D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46C8047F-2E14-43FE-AA4D-72B35F5FDAB4}
 	EndGlobalSection
 EndGlobal

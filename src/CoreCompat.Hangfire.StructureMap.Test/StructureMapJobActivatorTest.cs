@@ -146,18 +146,6 @@
             }
         }
 
-        [Fact]
-        public void Use_StructureMapActivator_Passes_Correct_Activator()
-        {
-#pragma warning disable 618
-            var configuration = new Mock<IBootstrapperConfiguration>();
-            var container = new Mock<IContainer>();
-
-            configuration.Object.UseStructureMapActivator(container.Object);
-            configuration.Verify(bootstrapperConfiguration => bootstrapperConfiguration.UseActivator(It.IsAny<StructureMapJobActivator>()));
-#pragma warning restore 618
-        }
-
         private StructureMapJobActivator CreateActivator()
         {
             return new StructureMapJobActivator(_container);
