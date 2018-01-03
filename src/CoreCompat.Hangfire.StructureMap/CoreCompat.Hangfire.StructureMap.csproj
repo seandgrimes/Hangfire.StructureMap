@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>cocowalla, lucashby, brantw, seandgrimes</Authors>
+    <Description>Port of Hangfire.StructureMap4 to Netstandard2.0 and the latest version of Hangfire. Note: This is not a drop-in replacement for the original package, you'll need to setup StructureMapJobActivator on your own with Hangfire since the original extension method for doing so is no longer supported by Hangfire.</Description>
+    <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/seandgrimes/Hangfire.StructureMap</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/seandgrimes/Hangfire.StructureMap</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
